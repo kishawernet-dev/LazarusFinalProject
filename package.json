@@ -1,0 +1,15 @@
+{
+  "name": "project-lazarus-station7-netlify-google-sheets",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo \"No build step needed\""
+  },
+  "dependencies": {
+    "google-auth-library": "^10.5.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^23.9.0"
+  }
+}
