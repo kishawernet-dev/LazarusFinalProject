@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Lazarus Final Mission Brief</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="genesis-hero" aria-label="Genesis Biotechnology Secure Student Portal">
+      <div class="binary-rain" aria-hidden="true">
+        1 1 0 1 1 1 1 1 0 0 0 0 1 0 1 1 0 1 1 1 0 0 1 1 0<br>
+        1 1 1 1 0 0 0 1 0 0 1 1 0 1 0 1 1 0 0 0 0 1 1 0 0<br>
+        0 0 0 0 1 1 0 0 1 1 1 0 1 0 0 0 1 1 1 1 0 0 1 0<br>
+        0 0 1 0 0 0 1 0 0 1 0 1 0 0 1 1 0 1 0 0 1 0 1<br>
+        1 1 0 0 1 0 0 0 1 1 0 1 0 1 1 0 1 1 0 1 0 0 0
+      </div>
+      <svg class="dna-svg" viewBox="0 0 220 300" role="img" aria-label="DNA icon">
+        <defs><linearGradient id="dnaGlow" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#d7ff72"/><stop offset="100%" stop-color="#a8d94a"/></linearGradient></defs>
+        <path d="M45 20 C165 75, 165 225, 45 280" fill="none" stroke="url(#dnaGlow)" stroke-width="18" stroke-linecap="round"/>
+        <path d="M175 20 C55 75, 55 225, 175 280" fill="none" stroke="url(#dnaGlow)" stroke-width="18" stroke-linecap="round"/>
+        <g stroke="url(#dnaGlow)" stroke-width="12" stroke-linecap="round"><line x1="66" y1="55" x2="154" y2="55"/><line x1="80" y1="88" x2="140" y2="88"/><line x1="96" y1="121" x2="124" y2="121"/><line x1="90" y1="154" x2="130" y2="154"/><line x1="78" y1="187" x2="142" y2="187"/><line x1="64" y1="220" x2="156" y2="220"/><line x1="52" y1="253" x2="168" y2="253"/></g>
+      </svg>
+      <div class="genesis-title"><div class="genesis-main">Genesis</div><div class="genesis-sub">BIOTECHNOLOGY</div></div>
+      <div class="portal-status">Secure Student Portal...connecting</div>
+      <div class="terminal-strip"></div>
+    </div>
+
+    <div class="card portal-intro">
+      <h1>Project Lazarus Final Mission Brief</h1>
+      <p>Your group will submit a condensed restoration plan. The workspace sections show your scientific thinking. Your final product link shows the polished report, slide deck, poster, or infographic your group created.</p>
+      <div class="security-note">Recommended group size: 3 students. A fourth student may be added only if needed as the Command Briefing Editor. To resume later, enter the same period, group name, and access code.</div>
+    </div>
+
+    <div id="startCard" class="card">
+      <h2>Start or Resume Group Project</h2>
+      <div class="row">
+        <div><label for="groupName">Group Name</label><input id="groupName" type="text" placeholder="Example: Delta Team"></div>
+        <div><label for="accessCode">Group Access Code</label><input id="accessCode" type="text" placeholder="At least 4 characters"></div>
+      </div>
+      <div class="row">
+        <div><label for="period">Class Period</label><select id="period"><option value="">Choose period</option><option value="1">Period 1</option><option value="2">Period 2</option><option value="3">Period 3</option><option value="4">Period 4</option><option value="5">Period 5</option><option value="6">Period 6</option><option value="7">Period 7</option><option value="8">Period 8</option></select></div>
+        <div><label for="productType">Final Product Type</label><select id="productType"><option value="">Choose product type</option><option value="One-page report">One-page report</option><option value="4-slide mini deck">4-slide mini deck</option><option value="Poster or infographic">Poster or infographic</option><option value="Other">Other</option></select></div>
+      </div>
+
+      <h3>Required Roles</h3>
+      <div class="roleGrid">
+        <div class="role-card"><h3>Diagnosis Lead</h3><p class="small">Leads Outbreak Diagnosis.</p><label for="m1First">First Name</label><input id="m1First" type="text"><label for="m1Last">Last Name</label><input id="m1Last" type="text"></div>
+        <div class="role-card"><h3>Ecology Lead</h3><p class="small">Leads Ecosystem Damage Report.</p><label for="m2First">First Name</label><input id="m2First" type="text"><label for="m2Last">Last Name</label><input id="m2Last" type="text"></div>
+        <div class="role-card"><h3>Restoration Lead</h3><p class="small">Leads Restoration Blueprint.</p><label for="m3First">First Name</label><input id="m3First" type="text"><label for="m3Last">Last Name</label><input id="m3Last" type="text"></div>
+      </div>
+
+      <h3>Optional Fourth Role</h3>
+      <div class="roleGrid optional"><div class="role-card"><h3>Command Briefing Editor</h3><p class="small">Optional. Strengthens evidence, reasoning, organization, visuals, and final product quality.</p><label for="m4First">First Name</label><input id="m4First" type="text"><label for="m4Last">Last Name</label><input id="m4Last" type="text"></div></div>
+
+      <div class="ai-warning">
+        <h3>Academic Integrity Warning</h3>
+        <p><strong>Do not use AI to generate, copy, or paste your workspace responses or individual defenses.</strong> Feedback may guide your revisions, but the final writing must be your group's own work using station evidence.</p>
+        <p>Your workspace responses, product link, and AI detection review flag will be shared with your teacher. AI detection is not automatic proof, but suspicious submissions may require a follow-up conference or oral defense.</p>
+        <div class="ack-row"><input id="aiNoticeAck" type="checkbox"><label for="aiNoticeAck">We understand that our responses must be our own writing and that AI detection will be applied to the typed workspace sections.</label></div>
+      </div>
+      <button id="startBtn">Start or Resume</button><div id="startStatus" class="status"></div>
+    </div>
+
+    <div id="projectCard" class="hidden">
+      <div class="card"><h2 id="projectTitle">Mission Workspace</h2><div class="missionBox"><strong>Required sections:</strong><ol><li>Final Product Link</li><li>Outbreak Diagnosis, Diagnosis Lead</li><li>Ecosystem Damage Report, Ecology Lead</li><li>Restoration Blueprint, Restoration Lead</li><li>Individual Scientific Defense, everyone</li></ol></div><p class="small">Use claim, evidence, and reasoning. The grading assistant checks for evidence and flags missing pieces, but your teacher makes the final scoring decision.</p></div>
+      <div class="card"><span class="section-tag">Product Verification</span><h2>Final Product Link</h2><div class="product-panel"><p>Paste the shareable URL to your final report, slide deck, poster, or infographic. <span class="required-note">Make sure you share it with your teacher.</span></p><label for="workspaceProductType">Where did you create your product?</label><select id="workspaceProductType"><option value="">Choose product type</option><option value="Google Docs report">Google Docs report</option><option value="Google Slides deck">Google Slides deck</option><option value="Canva infographic">Canva infographic</option><option value="Other web link">Other web link</option></select><label for="productLink">Final Product URL</label><input id="productLink" type="text" placeholder="Paste the shareable URL here. Make sure you share it with your teacher."><p class="small">Use a real link that starts with http:// or https://. Check the sharing settings before submitting.</p></div></div>
+      <div class="card"><span class="section-tag">Directive 01</span><h2>1. Outbreak Diagnosis</h2><p>Diagnosis Lead: What is the Lazarus Virus doing to the body? Include at least two pieces of evidence from genetics, cells, organelles, macromolecules, immune response, ATP loss, or lactic acid buildup.</p><textarea id="outbreakDiagnosis" placeholder="Claim: The Lazarus Virus causes... Evidence: ... Reasoning: ..."></textarea></div>
+      <div class="card"><span class="section-tag">Directive 02</span><h2>2. Ecosystem Damage Report</h2><p>Ecology Lead: What happened to the ecosystem after the outbreak? Use at least one graph or data reference from food webs, nutrient cycles, biodiversity, symbiosis, or succession.</p><textarea id="ecosystemDamage" placeholder="The ecosystem data shows... This matters because..."></textarea></div>
+      <div class="card"><span class="section-tag">Directive 03</span><h2>3. Restoration Blueprint</h2><p>Restoration Lead: What should Genesis Global Command do first, next, and long-term? Include a short-term action, a first-month action, and a long-term recovery action.</p><textarea id="restorationBlueprint" placeholder="First 24 hours: ... First month: ... Long-term: ... Evidence-based reason: ..."></textarea></div>
+      <div class="card"><span class="section-tag">Directive 04</span><h2>4. Individual Scientific Defense</h2><p>Everyone: Explain your role, the evidence you used, why it matters, and one limitation or weakness in the plan.</p><label id="defense1Label" for="defense1">Diagnosis Lead Defense</label><textarea id="defense1" placeholder="My role was Diagnosis Lead. The evidence I used was... This matters because... A limitation is..."></textarea><label id="defense2Label" for="defense2">Ecology Lead Defense</label><textarea id="defense2" placeholder="My role was Ecology Lead. The evidence I used was... This matters because... A limitation is..."></textarea><label id="defense3Label" for="defense3">Restoration Lead Defense</label><textarea id="defense3" placeholder="My role was Restoration Lead. The evidence I used was... This matters because... A limitation is..."></textarea><label id="defense4Label" for="defense4">Command Briefing Editor Defense</label><textarea id="defense4" placeholder="My role was Command Briefing Editor. I improved the project by... The evidence I checked was... A limitation is..."></textarea></div>
+      <div class="card"><h2>Project Checks</h2><ul class="checklist"><li>We pasted the final product URL.</li><li>We shared the final product with our teacher.</li><li>The Diagnosis Lead explained what the virus does to the body.</li><li>The Ecology Lead used at least one ecosystem graph or data point.</li><li>The Restoration Lead included first 24 hours, first month, and long-term restoration actions.</li><li>Every major claim has evidence and reasoning.</li><li>Each group member completed an individual scientific defense.</li></ul><div class="ai-warning"><h3>Before You Submit</h3><p>Your typed workspace sections must be your group's own writing. AI detection will be applied after submission and the result will be visible to your teacher.</p></div><button class="secondary" id="saveBtn">Save Draft</button><button class="secondary" id="feedbackBtn">Get Revision Feedback</button><button class="warning" id="submitBtn">Submit Final Mission Brief</button><div id="saveStatus" class="status"></div></div>
+      <div id="feedbackCard" class="card hidden"><h2>Revision Feedback</h2><div id="feedbackBox" class="feedback"></div></div>
+      <div id="submissionCard" class="card hidden"><h2>Submission Result</h2><div id="submissionBox" class="feedback"></div></div>
+    </div>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
